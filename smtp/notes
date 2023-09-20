@@ -1,0 +1,22 @@
+See https://github.com/Chris-F5/mysmtp for a simple SMTP client
+implementation in C.
+
+https://www.rfc-editor.org/rfc/rfc5321
+https://www.rfc-editor.org/rfc/rfc5322
+
+In the following command, I have omitted server responses and auth for
+security.
+[chris@archbox mail]$ ncat --ssl -C smtp.gmail.com 465
+EHLO smtp.gmail.com
+AUTH PLAIN ...
+MAIL FROM:<christopher.lang.256@gmail.com>
+RCPT TO:<christopher.lang.256@gmail.com>
+DATA
+From: christopher.lang.256@gmail.com
+To: christopher.lang.256@gmail.com
+Date: Thu, 17 Aug 2023 13:02:00 +0100
+Subject: smtp test
+
+Hello world!
+.
+QUIT
